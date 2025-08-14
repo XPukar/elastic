@@ -12,3 +12,5 @@ M 16 0 C 18.909 3.875 23.657 5.804 31.076 3.727 C 29.588 23.314 20.748 23.017 16
 https://docs.google.com/document/d/1DcI9GZp4p6PYwPJ9QgfSKynxnbC3BrJxuGng7Ml5qko/edit?usp=sharing
 
 https://drive.google.com/drive/folders/1N6raqO5Q6riz33RyrXq9ePf8RPFDBLh6?usp=drive_link
+
+logstash: https://docs.google.com/document/d/17CXY0xoRjNSdlwJRlprjoRBcA77GvqmtSp-IJIHutDc/edit?usp=sharing
