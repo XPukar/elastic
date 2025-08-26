@@ -14,3 +14,5 @@ https://docs.google.com/document/d/1DcI9GZp4p6PYwPJ9QgfSKynxnbC3BrJxuGng7Ml5qko/
 https://drive.google.com/drive/folders/1N6raqO5Q6riz33RyrXq9ePf8RPFDBLh6?usp=drive_link
 
 logstash: https://docs.google.com/document/d/17CXY0xoRjNSdlwJRlprjoRBcA77GvqmtSp-IJIHutDc/edit?usp=sharing
+Narang: https://drive.google.com/file/d/1FIFv0BOS1cV7KZ8EuyLVJWV-IFrFZz60/view?usp=drive_link
+35214392
