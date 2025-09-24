@@ -18,3 +18,12 @@ logstash: https://docs.google.com/document/d/17CXY0xoRjNSdlwJRlprjoRBcA77GvqmtSp
 Narang: https://drive.google.com/file/d/1FIFv0BOS1cV7KZ8EuyLVJWV-IFrFZz60/view?usp=drive_link
 35214392
 cmR5em9aZ0JES2VPbjBabUpzSmc6WElQdXdISW9uclRKSkVsbC1LTU5CUQ==
+
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: 'thiru_fake_aps'
+    static_configs:
+      - targets:
+          - '127.0.0.1:9100'
