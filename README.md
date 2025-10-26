@@ -23,5 +23,7 @@ sudo mkdir -p /etc/systemd/system/elasticsearch.service.d
 cat <<'EOF' | sudo tee /etc/systemd/system/elasticsearch.service.d/override.conf
 
 [Service]
+
 LimitMEMLOCK=infinity
+
 EOF       
