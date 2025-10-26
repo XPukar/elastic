@@ -15,14 +15,13 @@ echo "-Xms4g" | sudo tee /etc/elasticsearch/jvm.options.d/heap.options
 echo "-Xmx4g" | sudo tee -a /etc/elasticsearch/jvm.options.d/heap.options
 
 # elasticsearch.yml
-sudo bash -lc 'grep -q "^bootstrap.memory_lock:" /etc/elasticsearch/elasticsearch.yml \
-  && sudo sed -i "s/^bootstrap.memory_lock:.*/bootstrap.memory_lock: true/" /etc/elasticsearch/elasticsearch.yml \
-  || echo "bootstrap.memory_lock: true" | sudo tee -a /etc/elasticsearch/elasticsearch.yml'
+sudo bash -lc 'grep -q "^bootstrap.memory_lock:" /etc/elasticsearch/elasticsearch.yml && sudo sed -i "s/^bootstrap.memory_lock:.*/bootstrap.memory_lock: true/" /etc/elasticsearch/elasticsearch.yml || echo "bootstrap.memory_lock: true" | sudo tee -a /etc/elasticsearch/elasticsearch.yml'
 
 # systemd limits (allow memlock)
 sudo mkdir -p /etc/systemd/system/elasticsearch.service.d
+
 cat <<'EOF' | sudo tee /etc/systemd/system/elasticsearch.service.d/override.conf
+
 [Service]
 LimitMEMLOCK=infinity
 EOF       
-          - 
