@@ -1,0 +1,34 @@
+global
+  log /dev/log local0
+  log /dev/log local1 notice
+  maxconn 50000
+  tune.ssl.default-dh-param 2048
+
+defaults
+  log     global
+  mode    http
+  option  httplog
+  option  dontlognull
+  timeout connect 5s
+  timeout client  60s
+  timeout server  60s
+  timeout http-keep-alive 30s
+  timeout http-request 10s
+  retries 3
+
+# Frontend for Agents/Kibana/apps
+frontend fe_es_https
+  bind *:9200 ssl crt /etc/ssl/private/lb.pem
+  default_backend be_es
+
+# Backend to your ES nodes (HTTPS on each node)
+backend be_es
+  balance leastconn
+  option httpchk GET / HTTP/1.1\r\nHost:\ sinedr.cyber-everything.com
+  # ES will reply 401 to / without auth; treat 401 as healthy so we don't store a password here
+  http-check expect status 401
+  http-reuse safe
+  # If your ES node certs are self-signed, keep verify none; or replace with "verify required ca-file /path/to/es-ca.pem"
+  server edr2 192.168.1.6:9200 ssl verify none check
+  server edr3 192.168.1.9:9200 ssl verify none check
+  server edr4 192.168.1.8:9200 ssl verify none check
