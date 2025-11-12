@@ -3,7 +3,7 @@ for elastic 9
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-8.11.4-amd64.deb
 bin/keytool -importkeystore -destkeystore /etc/elasticsearch/certs/http-surakshaedr1.p12 -srckeystore /usr/share/elasticsearch/elastic-stack-ca.p12 -srcstoretype PKCS12
 
-
+https://drive.google.com/drive/u/0/folders/1y_Qu7cVINO7nMZIW49Nq-4gNAmGfZjnu
  
  [
 eyJ2ZXIiOiI4LjE0LjAiLCJhZHIiOlsiMTkyLjE2OC4xLjU6OTIwMCJdLCJmZ3IiOiI0ZWQxMjUxZDY2NDgyMTEwNmI0MjVmYzdkOTExMWFmMTEwYzFiNmRmYzZjZTUyMjA2MzdhMTQyMWM2NjljNDI5Iiwia2V5IjoiZWRJZ0E1a0JaUnZCQUVxbGl6Slc6TFJZdEJhVlU1Xy04Yk9HWlRwV2x0QSJ9
